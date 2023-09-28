@@ -1206,7 +1206,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"**● Here is what i found for your query\\n● 𝙍𝙚𝙨𝙪𝙡𝙩 :  Kingdom of Heaven\\n● 𝙏𝙤𝙩𝙖𝙡    : 25 Files**"
+        cap = f"**● Here is what i found for your query\\n● 𝙍𝙚𝙨𝙪𝙡𝙩 :  {search}\\n● 𝙏𝙤𝙩𝙖𝙡    : {total_results}**"
     if imdb and imdb.get('poster'):
         try:
             pic_fi=await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
