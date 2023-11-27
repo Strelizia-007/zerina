@@ -1207,8 +1207,8 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         cap = f"""**● Here is what i found for your query 
-● 𝙍𝙚𝙨𝙪𝙡𝙩 :  {search}
-● 𝙏𝙤𝙩𝙖𝙡    : {total_results}**"""
+<blockquote>● 𝙍𝙚𝙨𝙪𝙡𝙩 :  {search}
+● 𝙏𝙤𝙩𝙖𝙡    : {total_results}</blockquote>**"""
     if imdb and imdb.get('poster'):
         try:
             pic_fi=await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
